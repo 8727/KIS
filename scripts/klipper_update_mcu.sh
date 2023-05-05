@@ -3,6 +3,8 @@
 set -e
 clear
 
+echo -e "${green}>>>>>> Update MCU <<<<<<${white}"
+
 sudo cp -a ${USER}/klipper/.config ${USER}/.temp
 sudo cp -a ${USER}/KIS/MKS.config ${USER}/klipper/.config
 
@@ -14,6 +16,7 @@ make
 sudo service klipper start
 sudo cp -a  ${USER}/.temp  ${USER}/klipper/.config
 
+echo -e "${green}>>>>>> Update EBB <<<<<<${white}"
 
 sudo cp -a ${USER}/klipper/.config ${USER}/.temp
 sudo cp -a ${USER}/KIS/EBB.config ${USER}/klipper/.config
